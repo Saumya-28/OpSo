@@ -1,32 +1,24 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/SearchandFilterWidget.dart';
+
+
+
 class GSSOCScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Girl Script Summer of Code'),
+        title: Text('GirlScript Summer of Code'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Search',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                contentPadding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
-              ),
-              onChanged: (value) {
-                // Handle search input
-              },
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: SearchAndFilterWidget(),
           ),
-          SizedBox(height: 20),
+          /* SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -64,7 +56,7 @@ class GSSOCScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
             ),
             child: Text('View Projects'),
-          ),
+          ),*/
         ],
       ),
     );
@@ -97,5 +89,4 @@ void main() {
     home: GSSOCScreen(),
   ));
 }
-
 

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../widgets/SearchandFilterWidget.dart';
+
+
+
 class GoogleSummerOfCodeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,22 +17,10 @@ class GoogleSummerOfCodeScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Search',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                contentPadding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
-              ),
-              onChanged: (value) {
-                // Handle search input
-              },
-            ),
+            child: SearchAndFilterWidget(),
           ),
-          SizedBox(height: 20),
-          Row(
+
+          /*Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               YearButton(
@@ -54,18 +46,21 @@ class GoogleSummerOfCodeScreen extends StatelessWidget {
                 url: 'https://summerofcode.withgoogle.com/archive/2024/organizations', // Replace with actual URL
               ),
             ],
-          ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              // launch('https://example.com/projects'); // Replace with actual URL
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 226, 230, 120), // Set button color
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+          ),*/
+
+          /*  Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                // launch('https://example.com/projects'); // Replace with actual URL
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 226, 230, 120), // Set button color
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              ),
+              child: Text('View Projects'),
             ),
-            child: Text('View Projects'),
-          ),
+          ),*/
         ],
       ),
     );
